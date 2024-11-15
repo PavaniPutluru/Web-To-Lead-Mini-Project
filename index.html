@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web To Lead Form</title>
+    <link rel="Stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+</head>
+<h1>Create Lead</h1>
+<body>
+    <!-- manam submit button click chesthamo apudu ah form ni webserver ki submit chestham anduku manam ikkada event rastha s/y event: onsubmit-->
+   
+    <form 
+    action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5j00000DBrxz" 
+    method="POST"
+    onsubmit="beforesubmit()"
+    
+    >
+    
+    <input type=hidden name="oid" value="00D5j00000DBrxz">
+    <!--firstname lastname avanni salesforce ui unchi vasthayi data but ikkada lead date custom field manam 
+    create chesam.. manam lead date autopopulate cheyali ante for that we are going to create hidden field here..
+    submit cheyakamundu ah value ikkada populate avali..
+    ante form submit cheyakamunde manaki date populate vali dor that we are writing hidden field daniki js takes place-->
+    <input type=hidden name="retURL" value="">
+    <input type=hidden name="Lead_Date__c" class="outputdate"><!--so manam ikada kuda rayali cls name-->
+
+    <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text"  required="true"/><br>
+    
+    <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required="true"/><br>
+    
+    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" required="true"/><br>
+    
+    <label for="Lead Date">LeadDate</label><input type="date" required="true" class="inputdate"/><!--get the value that user entered write cls give name.. lead form submit cheyagane naku lead date capture kavali endukante manam idhi cutsom field creta chesam kabatti user enter chesina value ni js lo access cheyali ante anduku cls rasam -->
+    <!--Lead Date:<span class="dateInput dateOnlyInput"><input  id="00NJ4000003qiqw" name="00NJ4000003qiqw" size="12" type="text" /></span><br>-->
+    
+    <input type="submit" name="submit" class="submitClass">
+    
+    </form>
+    
+</body>
+</html>

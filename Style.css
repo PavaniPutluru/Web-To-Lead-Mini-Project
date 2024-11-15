@@ -1,0 +1,40 @@
+*{
+    margin: 0;/*side nunchi main box distance*/
+   padding:0;/*sub box to inner box distance*/
+    box-sizing: border-box;/*main contect box size anukunta*/
+}
+h1{
+    text-align: center;/*text center lo undataniki*/
+}
+input,lable{
+    display: block;/*first name pakana block ala unte ala kakunda firstname kinda block ala vachela chesthundi*/
+}
+label{
+    color: green;/*colour kosam idhi*/
+}
+input{
+    width: 100%;/*long bars for field inputs*/
+}
+.submitClass{/*manam submit lo class name thiskoni css chesthunam bcz paina filds anni oka width undali ee submit antha oka width undali kabati daniki specific ga rasthunam*/
+    
+    margin: 15px auto 0 auto;/*for margin*/
+    width: 40%;/* button long bars lekunda short ga undali ani*/
+    background-color: violet;/*for background colour*/
+    border-radius: 5px;/*which adds the curves for the pixel*/
+
+}
+form{/*form parent for the all these content so motham content ki box styling kosam idhi*/
+    min-width: 300px;/*for diff devices we have diff size in mobile one size in laptop one size so we use min max size here*/
+    max-width: 500px;
+    margin: auto;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 5px;
+}
+/*
+margin top right bottom left
+margin 25px 50px 75px 100px
+margin 25px auto
+left right value same thiskuntundi okavela okati ichi inko valu evakapothe same for bottom top
+
+*/
